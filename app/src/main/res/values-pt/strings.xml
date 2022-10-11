@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aceder Email</string>
+    <string name="main_email_ph">Email</string>
+    <string name="main_login">Entrar</string>
+    <string name="main_welcome">Bem-vindo</string>
+    <string name="main_password_ph">Palavra-passe</string>
+    <string name="register_text_ph">Registar</string>
+    <string name="register_email_ph">Email</string>
+    <string name="register_password_ph">Palavra-passe</string>
+    <string name="register_confirm_password_ph">Confirmar Palavra-passe</string>
+    <string name="register_register">Registar</string>
+</resources>

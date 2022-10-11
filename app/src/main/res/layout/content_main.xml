@@ -7,20 +7,44 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/main_welcome_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:textSize="50sp"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="98dp"
+        android:text="@string/main_welcome"
+        android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
 
+    <EditText
+        android:id="@+id/main_email_ph_et"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:textSize="27dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_welcome_tv"/>
+
+    <EditText
+        android:id="@+id/main_password_ph_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:textSize="27dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_email_ph_et"/>
+
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/button_login"
         style="@style/Widget.AppCompat.Button"
         android:onClick="doLogin"
         android:layout_width="wrap_content"
@@ -33,31 +57,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/main_password_ph_et"/>
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
+    <Button
+        android:id="@+id/button_registar"
+        style="@style/Widget.AppCompat.Button"
+        android:onClick="doLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password"
-        android:textSize="27dp"
-        android:inputType="textPassword"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"/>
+        android:background="#1CC123"
+        android:backgroundTint="#FF5722"
+        android:text="LOGIN"
+        android:textSize="30dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:ems="10"
-        android:textSize="27dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
