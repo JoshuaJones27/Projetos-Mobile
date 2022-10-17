@@ -33,8 +33,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         register.setOnClickListener{
-            val intent = Intent(this@MainActivity, Register::class.java)
+            val intent = Intent(this@MainActivity, register::class.java)
             startActivity(intent)
         }
     }
+
 }
