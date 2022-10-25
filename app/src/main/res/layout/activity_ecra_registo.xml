@@ -19,6 +19,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/register_name_ph_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName|textCapWords"
+        app:layout_constraintBottom_toTopOf="@+id/register_email_ph_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
         android:id="@+id/register_email_ph_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

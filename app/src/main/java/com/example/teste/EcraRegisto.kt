@@ -1,5 +1,6 @@
 package com.example.teste
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,15 @@ class EcraRegisto : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ecra_registo)
+    }
+
+    fun end(email: String, password: String)
+    {
+        val returnIntent = Intent()
+        returnIntent.putExtra("email", email)
+        returnIntent.putExtra("password", password)
+        setResult(Activity.RESULT_OK, returnIntent)
+        finish()
     }
 
     fun registerClick(v: View) {
@@ -45,8 +55,10 @@ class EcraRegisto : AppCompatActivity() {
             return
         }
 
-        val mainActivity : Intent = Intent(this, MainActivity::class.java)
-        startActivity(mainActivity)
+        end(email, password)
+
+        //val mainActivity : Intent = Intent(this, MainActivity::class.java)
+        //startActivity(mainActivity)
     }
 
 
