@@ -50,7 +50,7 @@
 
     <LinearLayout
         style="@style/buttonRow">
-        
+
         <Button
             style="@style/buttonNumber"
             android:text="AC"
@@ -63,7 +63,7 @@
             android:onClick="backSpaceAction"/>
         <Button
             style= "@style/buttonNumber"
-            android:text="9" />
+            android:text="" />
         <Button
             style= "@style/buttonOperator"
             android:text="/"/>
