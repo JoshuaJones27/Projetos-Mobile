@@ -26,8 +26,8 @@ class EcraRegisto : AppCompatActivity() {
 
     fun registerClick(v: View) {
 
-        val emailEditText : EditText = findViewById(R.id.register_email_ph_et)
-        val passwordEditText : EditText = findViewById(R.id.register_password_ph_et)
+        val emailEditText : EditText = findViewById(R.id.login_email_ph_et)
+        val passwordEditText : EditText = findViewById(R.id.login_password_ph_et)
         val confPasswordEditText : EditText = findViewById(R.id.register_confirm_password_ph_et)
 
         val email : String = emailEditText.text.toString()

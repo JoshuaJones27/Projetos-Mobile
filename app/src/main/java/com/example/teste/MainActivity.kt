@@ -5,7 +5,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +16,13 @@ class MainActivity : AppCompatActivity() {
 
     var email : String? = null
     var password : String? = null
+
+    val emailEditText : EditText = findViewById(R.id.login_email_ph_et)
+    val passwordEditText : EditText = findViewById(R.id.login_password_ph_et)
+
+    val email : String = emailEditText.text.toString()
+    val password : String = passwordEditText.text.toString()
+
 
     fun start()
     {
