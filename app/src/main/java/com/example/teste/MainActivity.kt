@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.ListView
 
 class MainActivity : AppCompatActivity() {
 
@@ -52,4 +53,5 @@ class MainActivity : AppCompatActivity() {
         //val registerActivity : Intent = Intent(this, EcraRegisto::class.java)
         //startActivity(registerActivity)
     }
+
 }
