@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.TextView
 
 class MySimpleArrayAdapter(context: Context, resource: Int, objects: MutableList<String>):
@@ -21,6 +22,8 @@ class MySimpleArrayAdapter(context: Context, resource: Int, objects: MutableList
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val view : View
+        val vh: MyViewHolder
         val inflater = LayoutInflater.from(mContext)
         val rowView = inflater.inflate(mResource, parent, false)
 
@@ -30,6 +33,25 @@ class MySimpleArrayAdapter(context: Context, resource: Int, objects: MutableList
 
         textView.text = value
 
+        if(convertView != null)
+        {
+            return convertView
+        }
+        else   {
+            view = LayoutInflater.from(context).inflate(R.layout.layout_item,parent, false)
+            view.tag = MyViewHolder(view)
+        }
+
+        vh = view.tag as MyViewHolder
+
+        vh.tv?.text = getItem(position)
+        vh.iv?.setBackgroundResource(color)
+
         return rowView
+    }
+
+    private class MyViewHolder(view: View?) {
+        val iv = view?.findViewById<ImageView>(R.id.layout_item_photo_iv)
+        val tv = view?.findViewById<TextView>(R.id.layout_item_name_tv)
     }
 }
